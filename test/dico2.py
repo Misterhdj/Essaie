@@ -12,9 +12,9 @@ while len(z2)!=0:
         x=input("Donnez une lettre")
     if x in z2 :
        index = []
-       for i in z3 :
-           if i == x :
-               index.append(z3.index(i))
+       for i in range(len(z3)) :
+           if z3[i] == x :
+               index.append(i)
        print(index)
        for i in index :
             pave[i]=x

@@ -1,15 +1,19 @@
 z=input("Donner le mot à deviner")
 z2=list(z)
+z3=list(z2)
 y = int(input("Nombre de try"))
-pave=["_"*len(z2)]
+pave= list("_"*len(z2))
+print(pave)
 while len(z2)!=0:
     print("Il reste {0} lettres à deviner".format(len(z2)))
+    
     x = input("Donnez une lettre")
-    while len(x)>1:
+    while len(x)>1 or len(x)==0:
         x=input("Donnez une lettre")
-    print(pave)
     if x in z2 :
-       a = int(z2.index(x))
+       print(z3)
+       a = int(z3.index(x))
+       print(a)
        pave[a]=x
        print(pave)
        z2.remove(x)

@@ -1,0 +1,1 @@
+z=input("Donner le mot à deviner")

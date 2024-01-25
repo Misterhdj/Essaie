@@ -8,7 +8,7 @@ list_1 = {"chat","soleil","maison","plage","pomme","arbre","ciel","école","livr
  #list_3 = ["coucou"]
  #list_4 = ["coucou"]
 
-dico1["1"] = list_1
+dico1[1] = list_1
 
 
 
@@ -23,13 +23,14 @@ if ennemy == 1:
     while not 1 <= difficulty <= 4:
         print("La difficulté doit être de 1,2,3 ou 4")
         difficulty = int(input("Choississez la difficulté, Facile:1 Medium:2 Hard:3 Chauchemar:4:  "))
-        
-    mot = random.choice(dico(difficulty))
+    if difficulty == 1 :
+        mot =list[random.randint(0,len(list_1)-1)]
+        print(mot)
 
 
+    
 else:
     mot = str(input("Joueur 2, Quelle est le mot à faire deviner ?"))
-print(mot)
+    print(mot)
            
-      
        

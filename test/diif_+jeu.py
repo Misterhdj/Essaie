@@ -13,7 +13,7 @@ dico1[1] = list_1
 
 
 ennemy = int(input("Contre qui voulez vous jouer ?                                          Contre l'ordinnateur:1                                                                  Contre un deuxième joueur:2   "))
-while not 1 <= ennemy <= 2:
+while ennemy != 1 or ennemy!= 2 :
     print("Il faut choisir entre 1 et 2!")
     ennemy = int(input("Contre qui voulez vous jouer ?                                          Contre l'ordinnateur:1                                                                  Contre un deuxième joueur:2   "))
 print(ennemy)
@@ -25,10 +25,10 @@ if ennemy == 1:
         difficulty = int(input("Choississez la difficulté, Facile:1 Medium:2 Hard:3 Chauchemar:4:  "))
     if difficulty == 1 :
         mot =list_1[int(random.randint(0,len(list_1)-1))]
-        print(mot)
+        y = 6
 
 
-    
+   
 else:
     mot = str(input("Joueur 2, Quelle est le mot à faire deviner ?"))
     print(mot)
@@ -36,7 +36,6 @@ else:
 
 z2=list(mot)
 z3=list(z2)
-y = int(input("Nombre de try"))
 pave= list("_"*len(z2))
 print(pave)
 while len(z2)!=0:

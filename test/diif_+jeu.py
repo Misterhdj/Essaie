@@ -44,7 +44,6 @@ while len(z2)!=0:
     print("Il reste {0} lettres à deviner".format(len(z2)))
     
     x = input("Donnez une lettre, vous avez déjà essayer {0}".format(lettres))
-    print("Il vous reste {0} essaie(s)".format(y))
     while len(x)>1 or len(x)==0 and x in lettres:
         x=input("Donnez une lettre")
     if x in z2 :
@@ -68,6 +67,7 @@ while len(z2)!=0:
         print(pave)
         print("Cette lettre n'est pas contenue dans le mot")
         y = y-1
+        print("Il vous reste {0} essaie(s)".format(y))
         lettres.append(x)
         if y ==0 :
             print("Tu as perdu") 

@@ -43,9 +43,9 @@ print(pave)
 while len(z2)!=0:
     print("Il reste {0} lettres à deviner".format(len(z2)))
     
-    x = input("Donnez une lettre")
-    print("Vous avez déjà essayer {0}".format(lettres))
-    while len(x)>1 or len(x)==0:
+    x = input("Donnez une lettre, vous avez déjà essayer {0}".format(lettres))
+    print("Il vous reste {0} essaie(s)".format(y))
+    while len(x)>1 or len(x)==0 and x in lettres:
         x=input("Donnez une lettre")
     if x in z2 :
        index = []

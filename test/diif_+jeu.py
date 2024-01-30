@@ -9,14 +9,14 @@ list_1 = ["chat","soleil","maison","plage","pomme","arbre","ciel","école","livr
  #list_4 = ["coucou"]
 
 dico1[1] = list_1
+listf=["1","2"]
 
 
-
-ennemy = int(input("Contre qui voulez vous jouer ?                                          Contre l'ordinnateur:1                                                                  Contre un deuxième joueur:2   "))
-while ennemy != 1 or ennemy!= 2 :
+a = input("Contre qui voulez vous jouer ?                                          Contre l'ordinnateur:1                                                                  Contre un deuxième joueur:2   ")
+while a not in listf :
     print("Il faut choisir entre 1 et 2!")
-    ennemy = int(input("Contre qui voulez vous jouer ?                                          Contre l'ordinnateur:1                                                                  Contre un deuxième joueur:2   "))
-print(ennemy)
+    a = input("Contre qui voulez vous jouer ?                                          Contre l'ordinnateur:1                                                                  Contre un deuxième joueur:2   ")
+ennemy = int(a)
 
 if ennemy == 1:
     difficulty = int(input("Choississez la difficulté, Facile:1 Medium:2 Hard:3 Chauchemar:4  "))
@@ -37,6 +37,7 @@ else:
 z2=list(mot)
 z3=list(z2)
 pave= list("_"*len(z2))
+lettres = []
 print(pave)
 while len(z2)!=0:
     print("Il reste {0} lettres à deviner".format(len(z2)))
@@ -55,6 +56,7 @@ while len(z2)!=0:
             for i in z2 : 
                if i == x :
                 z2.remove(x)
+       lettres.append(x)
        print(pave)
        print("Cette lettre est contenue dans le mot")
        if len(z2)== 0 and y!=0 :
@@ -64,6 +66,8 @@ while len(z2)!=0:
         print(pave)
         print("Cette lettre n'est pas contenue dans le mot")
         y = y-1
+        lettres.append(x)
         if y ==0 :
             print("Tu as perdu") 
+            print("Le mot était {0}".format(mot))
             exit()

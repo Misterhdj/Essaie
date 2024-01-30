@@ -10,7 +10,7 @@ list_1 = ["chat","soleil","maison","plage","pomme","arbre","ciel","école","livr
 
 dico1[1] = list_1
 listf=["1","2"]
-
+listd=["1","2","3","4"]
 
 a = input("Contre qui voulez vous jouer ?                                          Contre l'ordinnateur:1                                                                  Contre un deuxième joueur:2   ")
 while a not in listf :
@@ -19,10 +19,11 @@ while a not in listf :
 ennemy = int(a)
 
 if ennemy == 1:
-    difficulty = int(input("Choississez la difficulté, Facile:1 Medium:2 Hard:3 Chauchemar:4  "))
-    while not 1 <= difficulty <= 4:
+    b = input("Choississez la difficulté, Facile:1 Medium:2 Hard:3 Chauchemar:4  ")
+    while b not in listd:
         print("La difficulté doit être de 1,2,3 ou 4")
-        difficulty = int(input("Choississez la difficulté, Facile:1 Medium:2 Hard:3 Chauchemar:4:  "))
+        b = input("Choississez la difficulté, Facile:1 Medium:2 Hard:3 Chauchemar:4:  ")
+    difficulty=int(b)
     if difficulty == 1 :
         mot =list_1[int(random.randint(0,len(list_1)-1))]
         y = 6
@@ -43,6 +44,7 @@ while len(z2)!=0:
     print("Il reste {0} lettres à deviner".format(len(z2)))
     
     x = input("Donnez une lettre")
+    print("Vous avez déjà essayer {0}".format(lettres))
     while len(x)>1 or len(x)==0:
         x=input("Donnez une lettre")
     if x in z2 :

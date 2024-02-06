@@ -28,23 +28,45 @@ if ennemy == 1:
         mot =list_1[int(random.randint(0,len(list_1)-1))]
         y = 6
 
-
-   
 else:
     mot = str(input("Joueur 2, Quelle est le mot à faire deviner ?"))
     print(mot)
+    y=8
+mot=mot.lower()
+mot = list(mot)
+e=["é","è","ê"]
+for i in range(len(mot)) : 
+        if mot[i] in e :
+            mot[i]="e"
+a2=["à","ä","â"]
+for i in range(len(mot)) : 
+        if mot[i] in a2 :
+            mot[i]="a"
+for i in range(len(mot)):
+    if mot[i]=="ü":
+        mot[i]="u"
+for i in range(len(mot)):
+    if mot[i]=="ö":
+        mot[i]="o"
+for i in range(len(mot)):
+    if mot[i]=="î":
+        mot[i]="i"
+for i in range(len(mot)):
+    if mot[i]=="ç":
+        mot[i]="c"
 
-
-z2=list(mot)
-z3=list(z2)
+z2=mot
+z3=z2
 pave= list("_"*len(z2))
 lettres = []
+alphabet=list("qwertzuiopasdfghjklyxcvbnm-")
+
 print(pave)
 while len(z2)!=0:
     print("Il reste {0} lettres à deviner".format(len(z2)))
     
     x = input("Donnez une lettre, vous avez déjà essayer {0}".format(lettres))
-    while len(x)>1 or len(x)==0 and x in lettres:
+    while len(x)>1 or len(x)==0 or x in lettres or x not in alphabet:
         x=input("Donnez une lettre")
     if x in z2 :
        index = []
@@ -59,13 +81,13 @@ while len(z2)!=0:
                 z2.remove(x)
        lettres.append(x)
        print(pave)
-       print("Cette lettre est contenue dans le mot")
+       print("La lettre {0} est contenue dans le mot".format(x))
        if len(z2)== 0 and y!=0 :
            print("Tu as gagné")
            exit()
     else :
         print(pave)
-        print("Cette lettre n'est pas contenue dans le mot")
+        print("La lettre {0} n'est pas contenue dans le mot".format(x))
         y = y-1
         print("Il vous reste {0} essaie(s)".format(y))
         lettres.append(x)

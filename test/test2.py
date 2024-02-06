@@ -6,22 +6,24 @@ def option2_function():
 def quitter():
     tk.Menu,quit()
 def dimensionner():
-    width= window.winfo_screenwidth()               
-    height= window.winfo_screenheight()               
+    width= window.winfo_screenwidth()                
+    height= window.winfo_screenheight()              
     window.geometry("%dx%d" % (width, height))
+
+#PhotoImage()
+
+
 window = tk.Tk()
 #window.config(bg='magenta')
 window.attributes('-fullscreen', True)
 window.resizable(0,1)
 window.title('survive or get hanged')
-
 bienvenue = tk.Label(window, text="bienvenue dans survive or get hanged")
-bienvenue.pack()
 
-button = tk.Button(window, text="quitter le jeu", command=quitter, fg='red', bg='red')
-button.place(relx=1.5,rely=0.5)
-button.pack()
-
+button_q = tk.Button(window, text="quitter le jeu", command=quitter, bg='yellow')
+button_q.place(x=0,y=0,width=100, height=50)
+#button_q.pack(side='left')
+#button_s = tk.Button(window,text='start',bg='blue')
 
 menu = tk.Menu(window)
 window.config(menu=menu)
@@ -36,3 +38,4 @@ menu.add_cascade(
     underline=0
 )
 window.mainloop()
+window

@@ -1,39 +1,38 @@
 import tkinter as tk
 def option1_function():
     print("tu as choisi le mode difficle")
-def clic():
-    print("Le bouton a été cliqué !")
 def option2_function():
     print('tu as choisi le mode facile')
+def quitter():
+    tk.Menu,quit()
+def dimensionner():
+    width= window.winfo_screenwidth()               
+    height= window.winfo_screenheight()               
+    window.geometry("%dx%d" % (width, height))
+window = tk.Tk()
+#window.config(bg='magenta')
+window.attributes('-fullscreen', True)
+window.resizable(0,1)
+window.title('survive or get hanged')
 
-test = tk.Tk()
-test.title('le meilleur hangman de tous les temps')
-greeting = tk.Label(test, text="Hello, Tkinter")
-greeting.pack()
-button = tk.Button(test, text="Cliquez ici", command=clic)
-button.pack()
+bienvenue = tk.Label(window, text="bienvenue dans survive or get hanged")
+bienvenue.pack()
 
-import tkinter as tk
-from tkinter import Menu
+button = tk.Button(window, text="quitter le jeu", command=quitter, fg='red', bg='red')
+button.place(x=1000,y=1000)
+button.pack
 
-# create a menubar
-menu = Menu(test)
-test.config(menu=menu)
-file_menu = Menu(menu, tearoff=False)
-# add a menu item to the menu
+
+menu = tk.Menu(window)
+window.config(menu=menu)
+file_menu = tk.Menu(menu, tearoff=False)
 file_menu.add_command(
     label='Exit',
-    command=test.destroy
+    command=window.destroy
 )
-        
-
-# add the File menu to the menubar
 menu.add_cascade(
     label="File",
     menu=file_menu,
     underline=0
 )
-#menu=tk.Menu(menu, tearoff=False)
-#tk.Menu.add_command(label='difficle', command=option1_function) 
-#tk.Menu.add_command(label='facile', command=option2_function)
-test.mainloop()
+window.mainloop()

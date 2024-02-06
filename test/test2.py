@@ -19,8 +19,8 @@ bienvenue = tk.Label(window, text="bienvenue dans survive or get hanged")
 bienvenue.pack()
 
 button = tk.Button(window, text="quitter le jeu", command=quitter, fg='red', bg='red')
-button.place(x=1000,y=1000)
-button.pack
+button.place(relx=1.5,rely=0.5)
+button.pack()
 
 
 menu = tk.Menu(window)

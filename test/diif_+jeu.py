@@ -9,20 +9,21 @@ list_1 = ["chat","soleil","maison","plage","pomme","arbre","ciel","école","livr
  #list_4 = ["coucou"]
 
 dico1[1] = list_1
+listf=["1","2"]
+listd=["1","2","3","4"]
 
-
-
-ennemy = int(input("Contre qui voulez vous jouer ?                                          Contre l'ordinnateur:1                                                                  Contre un deuxième joueur:2   "))
-while ennemy != 1 or ennemy!= 2 :
+a = input("Contre qui voulez vous jouer ?                                          Contre l'ordinnateur:1                                                                  Contre un deuxième joueur:2   ")
+while a not in listf :
     print("Il faut choisir entre 1 et 2!")
-    ennemy = int(input("Contre qui voulez vous jouer ?                                          Contre l'ordinnateur:1                                                                  Contre un deuxième joueur:2   "))
-print(ennemy)
+    a = input("Contre qui voulez vous jouer ?                                          Contre l'ordinnateur:1                                                                  Contre un deuxième joueur:2   ")
+ennemy = int(a)
 
 if ennemy == 1:
-    difficulty = int(input("Choississez la difficulté, Facile:1 Medium:2 Hard:3 Chauchemar:4  "))
-    while not 1 <= difficulty <= 4:
+    b = input("Choississez la difficulté, Facile:1 Medium:2 Hard:3 Chauchemar:4  ")
+    while b not in listd:
         print("La difficulté doit être de 1,2,3 ou 4")
-        difficulty = int(input("Choississez la difficulté, Facile:1 Medium:2 Hard:3 Chauchemar:4:  "))
+        b = input("Choississez la difficulté, Facile:1 Medium:2 Hard:3 Chauchemar:4:  ")
+    difficulty=int(b)
     if difficulty == 1 :
         mot =list_1[int(random.randint(0,len(list_1)-1))]
         y = 6
@@ -37,12 +38,13 @@ else:
 z2=list(mot)
 z3=list(z2)
 pave= list("_"*len(z2))
+lettres = []
 print(pave)
 while len(z2)!=0:
     print("Il reste {0} lettres à deviner".format(len(z2)))
     
-    x = input("Donnez une lettre")
-    while len(x)>1 or len(x)==0:
+    x = input("Donnez une lettre, vous avez déjà essayer {0}".format(lettres))
+    while len(x)>1 or len(x)==0 and x in lettres:
         x=input("Donnez une lettre")
     if x in z2 :
        index = []
@@ -55,6 +57,7 @@ while len(z2)!=0:
             for i in z2 : 
                if i == x :
                 z2.remove(x)
+       lettres.append(x)
        print(pave)
        print("Cette lettre est contenue dans le mot")
        if len(z2)== 0 and y!=0 :
@@ -64,6 +67,9 @@ while len(z2)!=0:
         print(pave)
         print("Cette lettre n'est pas contenue dans le mot")
         y = y-1
+        print("Il vous reste {0} essaie(s)".format(y))
+        lettres.append(x)
         if y ==0 :
             print("Tu as perdu") 
+            print("Le mot était {0}".format(mot))
             exit()

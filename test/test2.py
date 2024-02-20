@@ -38,4 +38,4 @@ menu.add_cascade(
     underline=0
 )
 window.mainloop()
-window
+window 

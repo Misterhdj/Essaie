@@ -1,7 +1,9 @@
 import random
+
 #list_0 = {"coucou","salut"}
 
 dico1 = {}
+points=0
 
 list_1 = ["chat","soleil","maison","plage","pomme","arbre","ciel","école","livre","fleur","eau","montagne","robe","bateau","piano","oiseau","chien","route","nuage","cheval","coeur","jardin","avion","orange","étoile","fenêtre","ballon","poisson","lapin","cadeau","chemin","nuage","souris","porte","fenêtre","chapeau","manger","étoile","voiture","camion","train","lune","téléphone","ordinateur","table","chaise","pain","église","montre","carte","chaussure","vêtement","écrire","danse","musique","fruit","légume","photo","vacances","plante", "lettre","question","réponse","peinture","vacances","sport","paysage","merci","écrire","lire","dessiner", "écouter","regarder","jouer","courir","manger","dormir","chanter","rire","pleurer", "penser","aimer","parler","sauter","travailler","voyager","sourire","explorer","découvrir","grandir","apprendre","santé","bonheur","sagesse","amitié","espoir","paix","amour"]
  #list_2 = ["coucou"]
@@ -26,6 +28,7 @@ if ennemy == 1:
     difficulty=int(b)
     if difficulty == 1 :
         mot =list_1[int(random.randint(0,len(list_1)-1))]
+        print(mot)
         y = 6
 
 else:
@@ -56,7 +59,7 @@ for i in range(len(mot)):
         mot[i]="c"
 
 z2=mot
-z3=z2
+z3=z2.copy()
 pave= list("_"*len(z2))
 lettres = []
 alphabet=list("qwertzuiopasdfghjklyxcvbnm-")
@@ -93,5 +96,5 @@ while len(z2)!=0:
         lettres.append(x)
         if y ==0 :
             print("Tu as perdu") 
-            print("Le mot était {0}".format(mot))
+            print("Le mot était {0}".format(z3))
             exit()

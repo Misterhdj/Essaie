@@ -1,5 +1,5 @@
 import random
-
+import points
 #list_0 = {"coucou","salut"}
 
 dico1 = {}
@@ -63,6 +63,7 @@ z3=z2.copy()
 pave= list("_"*len(z2))
 lettres = []
 alphabet=list("qwertzuiopasdfghjklyxcvbnm-")
+score=0
 
 print(pave)
 while len(z2)!=0:
@@ -87,6 +88,15 @@ while len(z2)!=0:
        print("La lettre {0} est contenue dans le mot".format(x))
        if len(z2)== 0 and y!=0 :
            print("Tu as gagné")
+           if difficulty == 1 :
+               score=score + 50 + y*5
+           if difficulty == 2 :
+                score=score + 100 + y*5
+           if difficulty == 3 :
+                score = score + 150 + y*5
+           if difficulty == 4 :
+                score = score + 200 + y*5
+           print("Votre score est {0}".format(score)) 
            exit()
     else :
         print(pave)

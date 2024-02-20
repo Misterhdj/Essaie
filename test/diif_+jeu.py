@@ -97,6 +97,9 @@ while len(z2)!=0:
            if difficulty == 4 :
                 score = score + 200 + y*5
            print("Votre score est {0}".format(score)) 
+           f = open("leaderboard.txt","a")
+           f.write(str("{0}".format(score)))
+           f.close()
            exit()
     else :
         print(pave)

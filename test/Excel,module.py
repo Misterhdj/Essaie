@@ -1,39 +1,40 @@
 
-listmot = []
 
-import openpyxl
-nom_fichier_excel = ("LexiqueNew.xlsx")
-nom_feuille_excel = ("fich1")
-numero_colonne_excel = (1)
-def lire_colonne_excel(nom_fichier, nom_feuille, numero_colonne):
-    """
-    Lire les valeurs d'une colonne spécifique dans un fichier Excel.
 
-    Args:
-    - nom_fichier (str): Le nom du fichier Excel.
-    - nom_feuille (str): Le nom de la feuille Excel.
-    - numero_colonne (int): Le numéro de la colonne à lire (index de 1).
 
-    Returns:
-    - list: Une liste des valeurs de la colonne spécifiée.
-    """
-    valeurs_colonne = []
+def modifier_caracteres(s):
+    # Remplacer é,è,ê par e
+    s = s.replace('é', 'e').replace('è', 'e').replace('ê', 'e')
 
-    # Charger le classeur Excel
-    workbook = openpyxl.load_workbook(nom_fichier)
+    # Remplacer à,ä,â par a
+    s = s.replace('à', 'a').replace('ä', 'a').replace('â', 'a')
 
-    try:
-        # Accéder à la feuille
-        sheet = workbook[nom_feuille]
+    return s
 
-        # Lire les valeurs de la colonne spécifiée
-        for row in sheet.iter_rows(min_row=2, max_row=sheet.max_row, min_col=numero_colonne, max_col=numero_colonne):
-            for cell in row:
-                valeurs_colonne.append(cell.value)
-        print(valeurs_colonne[1])
-    finally:
-        # Fermer le classeur Excel
-        workbook.close()
+with open("t.txt", 'r') as fichier:
+        # Lire chaque ligne du fichier
+    lignes = fichier.readlines()
 
-    return valeurs_colonne
-lire_colonne_excel("LexiqueNew.xlsx", "fich1", 1)
+        # Créer une liste pour stocker les éléments de chaque ligne
+    liste_elements = []
+
+        # Parcourir chaque ligne et ajouter les éléments à la liste
+    for ligne in lignes:
+            # Supprimer les caractères de saut de ligne (\n)
+    
+        ligne = ligne.strip()
+        
+            # Séparer les éléments en utilisant un séparateur, par exemple une virgule (`,`)
+        elements = modifier_caracteres(ligne.split(',')[0])
+            # Ajouter la liste d'éléments à la liste principale
+    
+        # Afficher la liste résultante
+    #print("Liste des éléments de chaque ligne :", liste_elements
+        
+        liste_elements.append(elements)
+
+for mot in liste_elements:
+    if "cafe" == mot:
+        print("yes")
+    else:   
+        continue 

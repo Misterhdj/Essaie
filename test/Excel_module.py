@@ -36,3 +36,5 @@ def check_real_word(nom):
             print("yes")
         else:   
             continue 
+
+from Excel_module import *

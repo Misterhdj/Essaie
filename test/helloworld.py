@@ -1,4 +1,4 @@
-z=input("Donner le mot à deviner")
+pipz=input("Donner le mot à deviner")
 z2=list(z)
 z3=list(z2)
 y = int(input("Nombre de try"))

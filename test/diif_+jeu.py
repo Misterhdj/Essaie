@@ -5,7 +5,6 @@ from Excel_module import *
 
 dico1 = {}
 score = 0 
-Pseudo=input("Quel est votre pseudo ? ")
 
 list_1 = ["chat","soleil","maison","plage","pomme","arbre","ciel","école","livre","fleur","eau","montagne","robe","bateau","piano","oiseau","chien","route","nuage","cheval","coeur","jardin","avion","orange","étoile","fenêtre","ballon","poisson","lapin","cadeau","chemin","nuage","souris","porte","fenêtre","chapeau","manger","étoile","voiture","camion","train","lune","téléphone","ordinateur","table","chaise","pain","église","montre","carte","chaussure","vêtement","écrire","danse","musique","fruit","légume","photo","vacances","plante", "lettre","question","réponse","peinture","vacances","sport","paysage","merci","écrire","lire","dessiner", "écouter","regarder","jouer","courir","manger","dormir","chanter","rire","pleurer", "penser","aimer","parler","sauter","travailler","voyager","sourire","explorer","découvrir","grandir","apprendre","santé","bonheur","sagesse","amitié","espoir","paix","amour"]
  #list_2 = ["coucou"]
@@ -23,6 +22,7 @@ while a not in listf :
 ennemy = int(a)
 for i in range(1) :
     if ennemy == 1:
+        Pseudo1=input("Quel est votre pseudo ? ")
         b = input("Choississez la difficulté, Facile:1 Medium:2 Hard:3 Chauchemar:4  ")
         while b not in listd:
             print("La difficulté doit être de 1,2,3 ou 4")
@@ -34,6 +34,8 @@ for i in range(1) :
             y = 6
 
     else:
+        Pseudo1=input("Quel est le pseudo du joeueur 1 ? ")
+        Pseudo2=input("Quel est le pseudo du joeur 2 ? ")
         mot = str(input("Joueur 2, Quelle est le mot à faire deviner ?"))
         print(mot)
         y=8
@@ -117,7 +119,7 @@ for i in range(1) :
               
 
 f = open("leaderboard.txt","a")
-f.writelines(str("{0}".format(score))+",{0}".format(Pseudo)+"\n")
+f.writelines(str("{0}".format(score))+",{0}".format(Pseudo1)+"\n")
 f.close()
 
 f = open("leaderboard.txt","r")

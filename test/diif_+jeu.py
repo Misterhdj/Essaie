@@ -1,5 +1,6 @@
 import random
 import points
+from Excel_module import *
 #list_0 = {"coucou","salut"}
 
 dico1 = {}
@@ -58,6 +59,11 @@ for i in range(1) :
     for i in range(len(mot)):
         if mot[i]=="ç":
             mot[i]="c"
+    
+    check_real_word(mot)
+
+
+
 
     z2=mot
     z3=z2.copy()

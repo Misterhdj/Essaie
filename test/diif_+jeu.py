@@ -114,15 +114,7 @@ f = open("leaderboard.txt","a")
 f.writelines(str("{0}".format(score))+",{0}".format(Pseudo)+"\n")
 f.close()
 
-f = open("leaderboard.txt","r")
-lines =f.readlines()
-lead = {}
-i = 0
-for line in lines :
-     line = line.strip("\n")
-     player = line.split(",")
-     i = i + 1 
-     lead[i]=player
+
      
 f.close()
 import z 

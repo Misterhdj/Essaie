@@ -37,4 +37,3 @@ def check_real_word(nom):
         else:   
             continue 
 
-from Excel_module import *

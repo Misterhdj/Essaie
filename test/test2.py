@@ -44,19 +44,20 @@ def var_pseudo():
     Pseudo=pseudo.get()
     print(pseudo)
     erreur=tk.Label(window, text='choisi un pseudo!!!!!!')
-    while Pseudo == '':
-            erreur.place(relx=0.475,rely=0.4)
-            pseudo_affichage.destroy()
+    if Pseudo == '':                
+        erreur.place(relx=0.475,rely=0.4)
+        pseudo_affichage.destroy()
     else:
-            pseudo_affichage.destroy()
-            pseudo.destroy()
-            erreur.destroy()
-            button_pseudo.destroy()
-            button_f.place(relx=0.45,rely=0.2,relwidth=0.1, height=50)
-            button_m.place(relx=0.45,rely=0.4,relwidth=0.1, height=50)
-            button_h.place(relx=0.45,rely=0.6,relwidth=0.1, height=50)
-            button_c.place(relx=0.45,rely=0.8,relwidth=0.1, height=50)
-    
+        pseudo_affichage.destroy()
+        pseudo.destroy()
+        erreur.destroy()
+        button_pseudo.destroy()
+        button_f.place(relx=0.45,rely=0.2,relwidth=0.1, height=50)
+        button_m.place(relx=0.45,rely=0.4,relwidth=0.1, height=50)
+        button_h.place(relx=0.45,rely=0.6,relwidth=0.1, height=50)
+        button_c.place(relx=0.45,rely=0.8,relwidth=0.1, height=50)
+        
+        
 x=0
 window = tk.Tk()
 #window.config(bg='magenta')

@@ -47,6 +47,7 @@ def var_pseudo():
     if Pseudo == '':                
         erreur.place(relx=0.475,rely=0.4)
         pseudo_affichage.destroy()
+        x=1
     else:
         pseudo_affichage.destroy()
         pseudo.destroy()
@@ -56,16 +57,15 @@ def var_pseudo():
         button_m.place(relx=0.45,rely=0.4,relwidth=0.1, height=50)
         button_h.place(relx=0.45,rely=0.6,relwidth=0.1, height=50)
         button_c.place(relx=0.45,rely=0.8,relwidth=0.1, height=50)
-        
-        
-x=0
+    if x==1 and Pseudo !='':
+        pseudo_affichage.destroy()
 window = tk.Tk()
 #window.config(bg='magenta')
 window.attributes('-fullscreen', True)
 window.resizable(0,1)
 window.title('survive or get hanged')
 bienvenue = tk.Label(window, text="bienvenue dans survive or get hanged")
- 
+
 button_q = tk.Button(window, text="quitter le jeu"
                      , command=window.destroy
                      , fg='red')
@@ -99,6 +99,11 @@ nom=tk.StringVar()
 pseudo_affichage=tk.Label(window,text='choisi ton pseudo')
 pseudo=tk.Entry(window,text= 'choisi ton pseudo',textvariable = nom,)
 button_pseudo=tk.Button(window,text='enter',command=var_pseudo)
+
+lamda = 5
+underscore = tk.Label(window, text =lamda*'_')
+
+
 
 
 

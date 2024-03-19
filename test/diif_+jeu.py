@@ -1,8 +1,10 @@
 import random
 import points
 from Excel_module import *
+from test2 import *
 
 
+window.mainloop
 dico1 = {}
 score = 0 
 i = 0

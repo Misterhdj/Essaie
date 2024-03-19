@@ -129,6 +129,7 @@ for i in range(1) :
             if y ==0 :
                 print("Tu as perdu") 
                 print("Le mot était {0}".format(z3))
+            score = score 
               
 
 f = open("leaderboard.txt","a")

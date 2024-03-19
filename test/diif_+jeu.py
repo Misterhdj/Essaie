@@ -4,7 +4,9 @@ from Excel_module import *
 from test2 import *
 
 
-window.mainloop
+window_start.mainloop()
+
+
 dico1 = {}
 score = 0 
 i = 0
@@ -19,7 +21,6 @@ list_2 = ["coucou","anticonstitutionnellement", "hippopotomonstrosesquippedaliop
 dico1[1] = list_1
 listf=["1","2"]
 listd=["1","2","3","4"]
-
 a = input("Contre qui voulez vous jouer ?                                          Contre l'ordinnateur:1                                                                  Contre un deuxième joueur:2   ")
 
 while a not in listf :
@@ -48,11 +49,11 @@ for i in range(6) :
             print(mot)
             y = 6
         if difficulty == 3 :
-            mot =list_1[int(random.randint(0,len(list_1)-1))]
+            mot =list_2[int(random.randint(0,len(list_2)-1))]
             print(mot)
             y = 8
         else:
-            mot =list_1[int(random.randint(0,len(list_1)-1))]
+            mot =list_2[int(random.randint(0,len(list_2)-1))]
             print(mot)
             y = 6
 

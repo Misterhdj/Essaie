@@ -1,3 +1,6 @@
+import os 
+from PIL import ImageTk, Image
+import os
 import tkinter as tk
 Pseudo=""
 def ordinateur():
@@ -102,7 +105,7 @@ button_pseudo=tk.Button(window,text='enter',command=var_pseudo)
 
 lamda = 5
 underscore = tk.Label(window, text =lamda*'_')
-
+image1 = Image.open("<desktop/jeudupendufb.jpg>")
 
 
 

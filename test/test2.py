@@ -56,29 +56,28 @@ window.attributes('-fullscreen', True) #ouverture en fullscreen
 window.resizable(0,1)
 window.title('survive or get hanged')
 bienvenue = tk.Label(window, text="bienvenue dans survive or get hanged")
-
-#button_q = tk.Button(window, text="quitter le jeu" #création du bouton quitter afin de quitter le jeu à tout moment
+button_q = tk.Button(window, text="quitter le jeu" #création du bouton quitter afin de quitter le jeu à tout moment
                      , command=window.destroy
                      , fg='red')
 #button_q.place(relx=0.9,rely=0,relwidth=0.1, height=50) #place du bouton quitter
 #button_q.pack(side='left')
 #button_s = tk.Button(window #création du bouton start ainsi que son placement 
-                     ,text='start'
-                     ,command=start
-                      ,bg='blue',)
+#                     ,text='start'
+ #                    ,command=start
+  #                    ,bg='blue',)
 #button_s.place(relx=0.45,rely=0.5,relwidth=0.1, height=50)
 #placements et créations des boutons pour les 4 difficultés
 #button_f = tk.Button(window,
-                      text='facile',command=facile)
+     #                 text='facile',command=facile)
 #button_m = tk.Button(window,
-                    text='medium',
-                     command=medium)
+          #          text='medium',
+           #          command=medium)
 #button_h = tk.Button(window,
-                    text='hard',
-                     command=hard)
+           #         text='hard',
+            #         command=hard)
 #button_c = tk.Button(window,
-                     text='cauchemar',
-                     command=cauchemar)
+            #         text='cauchemar',
+             #        command=cauchemar)
 
 #button_ordinateur=tk.Button(window,#création du bouton ordinateur
  #                           text='ordinateur',command=ordinateur)
@@ -95,7 +94,7 @@ bienvenue = tk.Label(window, text="bienvenue dans survive or get hanged")
 #underscore = tk.Label(window, text =lamda*'_')
 #image1 = Image.open("<desktop/jeudupendufb.jpg>")
 
-
+#sdfgsdfgsdfg
 
 
 
@@ -115,3 +114,5 @@ menu.add_cascade(
 )
 window.mainloop()
 window 
+gvcxdfghnbvcxs
+print("nj")

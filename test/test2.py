@@ -1,6 +1,4 @@
-import os 
 from PIL import ImageTk, Image
-import os
 import tkinter as tk
 Pseudo=""
 def ordinateur(): #döfinition de l'action executée lorsqu'on appuie sur le bouton ordinateur

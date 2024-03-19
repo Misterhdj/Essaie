@@ -6,6 +6,7 @@ from Excel_module import *
 dico1 = {}
 score = 0 
 i = 0
+scores = []
 
 list_1 = ["chat","soleil","maison","plage","pomme","arbre","ciel","école","livre","fleur","eau","montagne","robe","bateau","piano","oiseau","chien","route","nuage","cheval","coeur","jardin","avion","orange","étoile","fenêtre","ballon","poisson","lapin","cadeau","chemin","nuage","souris","porte","fenêtre","chapeau","manger","étoile","voiture","camion","train","lune","téléphone","ordinateur","table","chaise","pain","église","montre","carte","chaussure","vêtement","écrire","danse","musique","fruit","légume","photo","vacances","plante", "lettre","question","réponse","peinture","vacances","sport","paysage","merci","écrire","lire","dessiner", "écouter","regarder","jouer","courir","manger","dormir","chanter","rire","pleurer", "penser","aimer","parler","sauter","travailler","voyager","sourire","explorer","découvrir","grandir","apprendre","santé","bonheur","sagesse","amitié","espoir","paix","amour"]
 list_2 = ["coucou","anticonstitutionnellement", "hippopotomonstrosesquippedaliophobie", "supercalifragilisticexpialidocious", "pneumonoultramicroscopicsilicovolcanoconiosis", "électroencéphalographie", "parallaxe", "équinoxe", "soliloque", "quintessence", "équivoque", "péremptoire", "simultanéité", "épigone", "synecdoque", "génuflexion", "procrastination", "exacerbation", "idiosyncrasie", "ineffable", "trichotillomanie", "syllogisme", "altruisme", "nihilisme", "métacognition", "circumlocution", "anachronisme", "hypothalamus", "mégalomanie", "égocentrique", "sycophante", "palimpseste", "osmose", "aporie", "ésotérique", "électrolyse", "acquiescence", "ébullition", "inefficacité", "rétrospective", "véracité", "palpitation", "prophylaxie", "obsolescence", "perspicacité", "ébullition", "prémonition", "incandescence", "monotonie", "épiphanie", "fluctuation", "ambivalence", "euphémisme", "polyvalent",
@@ -28,7 +29,7 @@ if ennemy == 1 :
 if ennemy == 2 : 
      Pseudo1=input("Quel est le pseudo du joeueur 1 ? ")
      Pseudo2=input("Quel est le pseudo du joeur 2 ? ")     
-for i in range(4) :
+for i in range(6) :
     i = i + 1
     if ennemy == 1:
         b = input("Choississez la difficulté, Facile:1 Medium:2 Hard:3 Chauchemar:4  ")
@@ -54,7 +55,11 @@ for i in range(4) :
             y = 6
 
     else:
-        mot = str(input("Joueur {0}, Quelle est le mot à faire deviner ?".format()))
+        if i%2!=0 :
+             u = 2
+        if i%2==0 : 
+             u = 1 
+        mot = str(input("Joueur {0}, Quelle est le mot à faire deviner ?".format(u)))
         print(mot)
         y=8
     mot=mot.lower()
@@ -116,14 +121,15 @@ for i in range(4) :
             if len(z2)== 0 and y!=0 :
                 print("Tu as gagné")
                 if difficulty == 1 :
-                    score=score + 50 + y*5
+                    score= 50 + y*5
                 if difficulty == 2 :
-                        score=score + 100 + y*5
+                        score= 100 + y*5
                 if difficulty == 3 :
-                        score = score + 150 + y*5
+                        score =  150 + y*5
                 if difficulty == 4 :
-                        score = score + 200 + y*5
-                print("Votre score est {0}".format(score)) 
+                        score =  200 + y*5
+                scores.append(score)
+                
          
         else :
             print(pave)
@@ -134,11 +140,28 @@ for i in range(4) :
             if y ==0 :
                 print("Tu as perdu") 
                 print("Le mot était {0}".format(z3))
-            score = score 
+            
               
-
+if ennemy == 1 : 
+     somme = 0 
+     for i in scores : 
+          somme += i 
+if ennemy == 2 :
+     point1=0
+     point2=0
+     for i in scores : 
+          if i%2==0 :
+               point1 += i 
+          if i%2!=0 :  
+               point2 += i 
+          
 f = open("leaderboard.txt","a")
-f.writelines(str("{0}".format(score))+",{0}".format(Pseudo1)+"\n")
+if ennemy == 1 :
+    f.writelines(str("{0}".format(somme))+",{0}".format(Pseudo1)+"\n")
+if ennemy == 2 :
+     f.writelines(str("{0}".format(point1))+",{0}".format(Pseudo1))
+     f.writelines(str("{0}".format(point2))+",{0}".format(Pseudo2))
+
 f.close()
 
 f = open("leaderboard.txt","r")

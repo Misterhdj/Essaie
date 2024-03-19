@@ -1,15 +1,11 @@
 import tkinter as tk
 Pseudo=""
-def dimensionner(): 
-    width= window.winfo_screenwidth()                
-    height= window.winfo_screenheight()        
-    window.geometry("%dx%d" % (width, height))
 def ordinateur():
     button_ordinateur.destroy()
     button_joueur.destroy()
-    button_pseudo.place(x=900,y=400,width=50,height=50)
-    pseudo.place(x=675,y=400,width=250,height=50)
-    pseudo_affichage.place(x=750,y=300)
+    button_pseudo.place(relx=0.6,rely=0.5,width=50,height=50)
+    pseudo.place(relx=0.4,rely=0.5,relwidth=0.2,height=50)
+    pseudo_affichage.place(relx=0.475,rely=0.4)
 
 def joueur():
     button_ordinateur.destroy()
@@ -17,8 +13,8 @@ def joueur():
     print('vous avez choisi le mode joueur')
 def start():
     button_s.destroy()
-    button_joueur.place(x=750,y=500,width=100,height=50)
-    button_ordinateur.place(x=750,y=100,width=100,height=50)
+    button_joueur.place(relx=0.45,rely=0.33,relwidth=0.1,height=50)
+    button_ordinateur.place(relx=0.45,rely=0.66,relwidth=0.1,height=50)
 def facile():
     button_f.destroy()
     button_m.destroy()
@@ -48,36 +44,38 @@ def var_pseudo():
     Pseudo=pseudo.get()
     print(pseudo)
     erreur=tk.Label(window, text='choisi un pseudo!!!!!!')
-    if Pseudo == '':
-        erreur.place(x=750,y=300)
+    if Pseudo == '':                
+        erreur.place(relx=0.475,rely=0.4)
         pseudo_affichage.destroy()
+        x=1
     else:
         pseudo_affichage.destroy()
         pseudo.destroy()
         erreur.destroy()
         button_pseudo.destroy()
-        button_f.place(relx=0.5,rely=0.2,width=100, height=50)
-        button_m.place(relx=0.5,rely=0.4,width=100, height=50)
-        button_h.place(relx=0.5,rely=0.6,width=100, height=50)
-        button_c.place(relx=0.5,rely=0.8,width=100, height=50)
-x=0
+        button_f.place(relx=0.45,rely=0.2,relwidth=0.1, height=50)
+        button_m.place(relx=0.45,rely=0.4,relwidth=0.1, height=50)
+        button_h.place(relx=0.45,rely=0.6,relwidth=0.1, height=50)
+        button_c.place(relx=0.45,rely=0.8,relwidth=0.1, height=50)
+    if x==1 and Pseudo !='':
+        pseudo_affichage.destroy()
 window = tk.Tk()
 #window.config(bg='magenta')
 window.attributes('-fullscreen', True)
 window.resizable(0,1)
 window.title('survive or get hanged')
 bienvenue = tk.Label(window, text="bienvenue dans survive or get hanged")
- 
+
 button_q = tk.Button(window, text="quitter le jeu"
                      , command=window.destroy
                      , fg='red')
-button_q.place(x=1500,y=0,width=100, height=50)
+button_q.place(relx=0.9,rely=0,relwidth=0.1, height=50)
 #button_q.pack(side='left')
 button_s = tk.Button(window
                      ,text='start'
                      ,command=start
                       ,bg='blue',)
-button_s.place(x=700,y=500,width=200, height=50)
+button_s.place(relx=0.45,rely=0.5,relwidth=0.1, height=50)
 
 button_f = tk.Button(window,
                       text='facile',command=facile)
@@ -101,6 +99,11 @@ nom=tk.StringVar()
 pseudo_affichage=tk.Label(window,text='choisi ton pseudo')
 pseudo=tk.Entry(window,text= 'choisi ton pseudo',textvariable = nom,)
 button_pseudo=tk.Button(window,text='enter',command=var_pseudo)
+
+lamda = 5
+underscore = tk.Label(window, text =lamda*'_')
+
+
 
 
 

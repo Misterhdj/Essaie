@@ -17,12 +17,15 @@ def classe()     :
      point = []
      for i in lead :
           point.append(lead[i][0])
-     point.sort
+     point.sort(reverse=True)
      for i in point :
           for x in lead :
-               if i == lead[x][0]:
+               if i == lead[x][0] and lead[x][1] not in classement:
                     classement.append(lead[x][1])
      print(classement)
+
+
+
 
 
 

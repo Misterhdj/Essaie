@@ -8,7 +8,7 @@ def classe()     :
      i = 0
      for line in lines :
           line = line.strip("\n")
-          player = line.split(",")
+          player = line.split(":")
           i = i + 1 
           lead[i]=player
           

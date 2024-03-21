@@ -65,6 +65,9 @@ window.attributes('-fullscreen', True) #ouverture en fullscreen
 window.resizable(0,1)
 window.title('survive or get hanged')
 bienvenue = tk.Label(window, text="bienvenue dans survive or get hanged")
+img = ImageTk.PhotoImage(Image.open(path))
+label = tk.Label(window, image = img)
+label.place(relx=0,relwidth=1,relheight=1)  
 button_q = tk.Button(window, text="quitter le jeu" #création du bouton quitter afin de quitter le jeu à tout moment
                      , command=window.destroy
                      , fg='red')
@@ -73,11 +76,8 @@ button_q.place(relx=0.9,rely=0,relwidth=0.1, height=50) #place du bouton quitter
 button_s = tk.Button(window #création du bouton start ainsi que son placement 
                      ,text='start'
                      ,command=start
-                      ,bg='blue',)
-img = ImageTk.PhotoImage(Image.open(path))
-label = tk.Label(window, image = img)
-label.place(relx=0,relwidth=1,relheight=1)
-#button_s.place(relx=0.45,rely=0.5,relwidth=0.1, height=50)
+                      ,bg='blue',)  
+button_s.place(relx=0.45,rely=0.6,relwidth=0.1, height=50)
 #placements et créations des boutons pour les 4 difficultés
 #button_f = tk.Button(window,
      #                 text='facile',command=facile)

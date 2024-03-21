@@ -1,6 +1,7 @@
 from PIL import ImageTk, Image
 import tkinter as tk
 Pseudo=""
+azy = 0
 #def ordinateur(): #döfinition de l'action executée lorsqu'on appuie sur le bouton ordinateur
     #button_ordinateur.destroy() #détruit les deux derniers boutons
     #button_joueur.destroy()
@@ -12,8 +13,10 @@ Pseudo=""
     #button_ordinateur.destroy() #détruit les deux boutons qui sont devenus inutiles
     #button_joueur.destroy()
 def start():#définition du bouton start, on le détruit et on place les deux prochains boutons
+    global azy
     button_s.destroy()
     azy = 1
+    window.destroy()
     #button_joueur.place(relx=0.45,rely=0.33,relwidth=0.1,height=50)
     #button_ordinateur.place(relx=0.45,rely=0.66,relwidth=0.1,height=50)
 #def facile(): #définition du bouton facile, détruit tous les derniers boutons et lance le jeu
@@ -66,7 +69,7 @@ button_s = tk.Button(window #création du bouton start ainsi que son placement
                      ,text='start'
                      ,command=start
                       ,bg='blue',)
-#button_s.place(relx=0.45,rely=0.5,relwidth=0.1, height=50)
+button_s.place(relx=0.45,rely=0.5,relwidth=0.1, height=50)
 #placements et créations des boutons pour les 4 difficultés
 #button_f = tk.Button(window,
      #                 text='facile',command=facile)

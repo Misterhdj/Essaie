@@ -123,14 +123,17 @@ for i in range(6) :
             print("La lettre {0} est contenue dans le mot".format(x))
             if len(z2)== 0 and y!=0 :
                 print("Tu as gagné")
+                if len(z3)>8 :
+                     o = (len(z3)-8)*15
+                     
                 if difficulty == 1 :
-                    score= 50 + y*5
+                    score= 50 + y*5 + o 
                 if difficulty == 2 :
-                        score= 100 + y*5
+                        score= 100 + y*5 + o
                 if difficulty == 3 :
-                        score =  150 + y*5
+                        score =  150 + y*5 + o 
                 if difficulty == 4 :
-                        score =  200 + y*5
+                        score =  200 + y*5 + o 
                 scores.append(score)
                 
          

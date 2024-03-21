@@ -14,7 +14,7 @@ i = 0
 scores = []
 u = 1 
 list_1 = ["chat","soleil","maison","plage","pomme","arbre","ciel","école","livre","fleur","eau","montagne","robe","bateau","piano","oiseau","chien","route","nuage","cheval","coeur","jardin","avion","orange","étoile","fenêtre","ballon","poisson","lapin","cadeau","chemin","nuage","souris","porte","fenêtre","chapeau","manger","étoile","voiture","camion","train","lune","téléphone","ordinateur","table","chaise","pain","église","montre","carte","chaussure","vêtement","écrire","danse","musique","fruit","légume","photo","vacances","plante", "lettre","question","réponse","peinture","vacances","sport","paysage","merci","écrire","lire","dessiner", "écouter","regarder","jouer","courir","manger","dormir","chanter","rire","pleurer", "penser","aimer","parler","sauter","travailler","voyager","sourire","explorer","découvrir","grandir","apprendre","santé","bonheur","sagesse","amitié","espoir","paix","amour"]
-list_2 = ["coucou","anticonstitutionnellement", "hippopotomonstrosesquippedaliophobie", "supercalifragilisticexpialidocious", "pneumonoultramicroscopicsilicovolcanoconiosis", "électroencéphalographie", "parallaxe", "équinoxe", "soliloque", "quintessence", "équivoque", "péremptoire", "simultanéité", "épigone", "synecdoque", "génuflexion", "procrastination", "exacerbation", "idiosyncrasie", "ineffable", "trichotillomanie", "syllogisme", "altruisme", "nihilisme", "métacognition", "circumlocution", "anachronisme", "hypothalamus", "mégalomanie", "égocentrique", "sycophante", "palimpseste", "osmose", "aporie", "ésotérique", "électrolyse", "acquiescence", "ébullition", "inefficacité", "rétrospective", "véracité", "palpitation", "prophylaxie", "obsolescence", "perspicacité", "ébullition", "prémonition", "incandescence", "monotonie", "épiphanie", "fluctuation", "ambivalence", "euphémisme", "polyvalent",
+list_2 = ["coucou", "supercalifragilisticexpialidocious", "pneumonoultramicroscopicsilicovolcanoconiosis", "électroencéphalographie", "parallaxe", "équinoxe", "soliloque", "quintessence", "équivoque", "péremptoire", "simultanéité", "épigone", "synecdoque", "génuflexion", "procrastination", "exacerbation", "idiosyncrasie", "ineffable", "trichotillomanie", "syllogisme", "altruisme", "nihilisme", "métacognition", "circumlocution", "anachronisme", "hypothalamus", "mégalomanie", "égocentrique", "sycophante", "palimpseste", "osmose", "aporie", "ésotérique", "électrolyse", "acquiescence", "ébullition", "inefficacité", "rétrospective", "véracité", "palpitation", "prophylaxie", "obsolescence", "perspicacité", "ébullition", "prémonition", "incandescence", "monotonie", "épiphanie", "fluctuation", "ambivalence", "euphémisme", "polyvalent",
            "ambidextre", "antagonisme", "équidistant", "décadence", "juxtaposition", "proéminence", "monomanie", "irrévérence", "omnipotence", "persévérance", "rétrospection", "inhibition", "pléthore", "inefficience", "plénitude", "concomitant", "concaténation", "infatigable", "pérennité", "intransigeant", "infinitésimal", "supposition", "dialectique", "oxygénation", "désoxydation", "aberration", "prémisse", "sérendipité", "hétérogénéité", "paradoxe", "diaphanéité", "réminiscence", "transcendance", "concaténation", "alchimie", "idiosyncrasie", "antithèse", "omniprésence", "infrastructures", "mégalithique", "amalgamation", "hétéroclite", "excentricité", "réfraction", "multifacette", "corollaire", "étiolement", "diffraction", "bicaméral", "infrastructures", "hypothétique", "égocentrisme", "éclectique", "sophisme", "évanescence", "cryptographie", "nécromancie", "diachronique", "protagoniste",
              "présage", "prédilection", "rémission", "obfuscation", "sérendipité", "épithète", "symbiotique", "divergence", "nostalgie", "prodigieux", "prémices", "éphémère", "entropie", "crépusculaire", "pléonasme", "omniscient", "sérendipité", "dissonance", "redondance", "incantation", "prolifération", "frugalité", "placidité", "éloquence", "authentique", "exacerbation", "insouciance", "incongru", "impudence", "inexorable", "élixir", "incantation", "cacophonie", "opulence", "pluralité", "nébuleux", "parité", "cryptique", "quadrature", "quintessence", "incorrigible", "querelle", "propension", "polymorphe", "polymathique", "paroxysme", "absolution", "conjecture", "effervescence", "euphorie", "catharsis", "dystopie", "astucieux", "clémence", "prophylactique", "altérité", "impénétrable", "magnanime", "discordance", "clarté", "catégorique", "catatonique", "converger", "digresser", "équivoque",
                "élucider", "dialectique", "épiphanie", "érudition", "excentrique", "exhorter", "époustouflant", "extravagant", "fébrile", "flegmatique", "fulgurant", "générique", "hiérarchie", "hétérodoxe", "immuable", "imparable", "imperméable", "inaltérable", "ineffable", "infamie", "inlassable", "intransigeant", "invétéré", "irréfragable", "irrévocable", "limpide", "magnanime", "magnificence", "majestueux", "mélancolique", "méticuleux", "multiforme", "mythique", "nébuleux", "néophyte", "nostalgie", "nouveau", "ondoyant", "onirique", "paradoxal", "pathétique", "pécuniaire", "péremptoire", "périlleux", "pétrifié", "philanthropie", "platonique", "polémique", "polyglotte"]
@@ -126,16 +126,16 @@ while u == 1 :
                 if len(z2)== 0 and y!=0 :
                     print("Tu as gagné")
                     if len(z3)>8 :
-                        o = (len(z3)-8)*15
+                        o = (len(z3)-8)*1.5
                         
                     if difficulty == 1 :
-                        score= 50 + y*5 + o 
+                        score= 5 + y*5 + o 
                     if difficulty == 2 :
-                            score= 100 + y*5 + o
+                            score= 10 + y*5 + o
                     if difficulty == 3 :
-                            score =  150 + y*5 + o 
+                            score =  15 + y*5 + o 
                     if difficulty == 4 :
-                            score =  200 + y*5 + o 
+                            score =  20 + y*5 + o 
                     scores.append(score)
                     
             

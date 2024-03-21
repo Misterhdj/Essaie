@@ -106,7 +106,7 @@ for i in range(6) :
         
         x = input("Donnez une lettre, vous avez déjà essayer {0}".format(lettres))
         while len(x)>1 or len(x)==0 or x in lettres or x not in alphabet:
-            x=input("Donnez une lettre")
+            x=input("Donnez une lettre, vous avez déjà essayer celle-la")
         if x in z2 :
             index = []
             for i in range(len(z3)) :

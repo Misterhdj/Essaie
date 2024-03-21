@@ -22,3 +22,5 @@ def classe()     :
           for x in lead :
                if i == lead[x][0] and lead[x][1] not in classement:
                     classement.append("{0} {1}".format(lead[x][1],lead[x][0]))
+     print(classement)
+classe() 

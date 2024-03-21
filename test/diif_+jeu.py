@@ -4,7 +4,7 @@ from Excel_module import *
 from test2 import *
 
 
-window.mainloop()
+w_fin.mainloop()
 
 
 dico1 = {}

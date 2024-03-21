@@ -6,6 +6,7 @@ from pathlib import Path
 script_path = Path(__file__).resolve()
 script_dir = script_path.parent
 path = str(script_dir)+ "/accueil.jpg"
+path_2 = str(script_dir)+ "/fond.jpg"
 Pseudo=""
 #def ordinateur(): #döfinition de l'action executée lorsqu'on appuie sur le bouton ordinateur
     #button_ordinateur.destroy() #détruit les deux derniers boutons
@@ -102,15 +103,6 @@ button_s.place(relx=0.45,rely=0.6,relwidth=0.1, height=50)
 #pseudo=tk.Entry(window,text= 'choisi ton pseudo',textvariable = nom,)#entrée pour avoir le pseudo que le joueur veut
 #button_pseudo=tk.Button(window,text='enter',command=var_pseudo)#bouton qu'on appuie pour avoir le pseudo
 
-#lamda = 5
-#underscore = tk.Label(window, text =lamda*'_')
-#image1 = Image.open("<desktop/jeudupendufb.jpg>")
-
-#sdfgsdfgsdfg
-
-
-
-
 #création d'un menu pour pouvoir quitter nimporte quand
 menu = tk.Menu(window)
 window.config(menu=menu)
@@ -124,5 +116,20 @@ menu.add_cascade(
 menu=file_menu,
     underline=0
 )
-window.mainloop()
-window 
+#window.mainloop()
+#window 
+#création de la fenêtre de fin
+w_fin = tk.Tk()
+window.attributes('-fullscreen', True) #ouverture en fullscreen
+window.resizable(0,1)
+window.title('survive or get hanged')
+img_2 = ImageTk.PhotoImage(Image.open(path_2))
+image_fin = tk.Label(w_fin, )
+image_fin.place(relx=0,relwidth=1,relheight=1) 
+leaderboard_1 = tk.Label(w_fin,)
+leaderboard_2 = tk.Label(w_fin,)
+leaderboard_3 = tk.Label(w_fin,)
+leaderboard_4 = tk.Label(w_fin,)
+leaderboard_5 = tk.Label(w_fin,)
+w_fin.mainloop()
+w_fin

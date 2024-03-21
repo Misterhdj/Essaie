@@ -7,7 +7,6 @@ script_path = Path(__file__).resolve()
 script_dir = script_path.parent
 path = str(script_dir)+ "/accueil.jpg"
 path_2 = str(script_dir)+ "/fond.jpg"
-Pseudo=""
 #def ordinateur(): #döfinition de l'action executée lorsqu'on appuie sur le bouton ordinateur
     #button_ordinateur.destroy() #détruit les deux derniers boutons
     #button_joueur.destroy()
@@ -79,6 +78,19 @@ button_s = tk.Button(window #création du bouton start ainsi que son placement
                      ,command=start
                       ,bg='blue',)  
 button_s.place(relx=0.45,rely=0.6,relwidth=0.1, height=50)
+#création d'un menu pour quitter
+menu = tk.Menu(window)
+window.config(menu=menu)
+file_menu = tk.Menu(menu, tearoff=False)
+file_menu.add_command(
+    label='Exit',
+    command=window.destroy
+)
+menu.add_cascade(
+    label="File",
+menu=file_menu,
+    underline=0
+)
 #placements et créations des boutons pour les 4 difficultés
 #button_f = tk.Button(window,
      #                 text='facile',command=facile)
@@ -103,19 +115,6 @@ button_s.place(relx=0.45,rely=0.6,relwidth=0.1, height=50)
 #pseudo=tk.Entry(window,text= 'choisi ton pseudo',textvariable = nom,)#entrée pour avoir le pseudo que le joueur veut
 #button_pseudo=tk.Button(window,text='enter',command=var_pseudo)#bouton qu'on appuie pour avoir le pseudo
 
-#création d'un menu pour pouvoir quitter nimporte quand
-menu = tk.Menu(window)
-window.config(menu=menu)
-file_menu = tk.Menu(menu, tearoff=False)
-file_menu.add_command(
-    label='Exit',
-    command=window.destroy
-)
-menu.add_cascade(
-    label="File",
-menu=file_menu,
-    underline=0
-)
-#window.mainloop()
-#window 
+window.mainloop()
+window 
 #création de la fenêtre de fin

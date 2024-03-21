@@ -119,17 +119,3 @@ menu=file_menu,
 #window.mainloop()
 #window 
 #création de la fenêtre de fin
-w_fin = tk.Tk()
-window.attributes('-fullscreen', True) #ouverture en fullscreen
-window.resizable(0,1)
-window.title('survive or get hanged')
-img_2 = ImageTk.PhotoImage(Image.open(path_2))
-image_fin = tk.Label(w_fin, )
-image_fin.place(relx=0,relwidth=1,relheight=1) 
-leaderboard_1 = tk.Label(w_fin,)
-leaderboard_2 = tk.Label(w_fin,)
-leaderboard_3 = tk.Label(w_fin,)
-leaderboard_4 = tk.Label(w_fin,)
-leaderboard_5 = tk.Label(w_fin,)
-w_fin.mainloop()
-w_fin

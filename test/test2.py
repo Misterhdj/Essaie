@@ -1,6 +1,9 @@
 from PIL import ImageTk, Image
 import tkinter as tk
-Pseudo=""
+from pathlib import Path
+script_path = Path(__file__).resolve()
+script_dir = script_path.parent
+path = str(script_dir)+ "/jeudupendufb.jpg"
 azy = 0
 #def ordinateur(): #döfinition de l'action executée lorsqu'on appuie sur le bouton ordinateur
     #button_ordinateur.destroy() #détruit les deux derniers boutons
@@ -70,6 +73,9 @@ button_s = tk.Button(window #création du bouton start ainsi que son placement
                      ,command=start
                       ,bg='blue',)
 button_s.place(relx=0.45,rely=0.5,relwidth=0.1, height=50)
+img = ImageTk.PhotoImage(Image.open(path))
+panel = tk.Label(window, image = img)
+panel.place(relx=0,rely=0,relwidth=0.5,relheight=0.5)
 #placements et créations des boutons pour les 4 difficultés
 #button_f = tk.Button(window,
      #                 text='facile',command=facile)

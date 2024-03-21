@@ -162,8 +162,8 @@ f = open("leaderboard.txt","a")
 if ennemy == 1 :
     f.writelines(str("{0}".format(somme))+",{0}".format(Pseudo1)+"\n")
 if ennemy == 2 :
-     f.writelines(str("{0}".format(point1))+",{0}".format(Pseudo1))
-     f.writelines(str("{0}".format(point2))+",{0}".format(Pseudo2))
+     if point1>point2 :
+          print()
 
 f.close()
 

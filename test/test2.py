@@ -1,5 +1,11 @@
 from PIL import ImageTk, Image
 import tkinter as tk
+from PIL import ImageTk, Image
+import tkinter as tk
+from pathlib import Path
+script_path = Path(__file__).resolve()
+script_dir = script_path.parent
+path = str(script_dir)+ "/accueil.jpg"
 Pseudo=""
 #def ordinateur(): #döfinition de l'action executée lorsqu'on appuie sur le bouton ordinateur
     #button_ordinateur.destroy() #détruit les deux derniers boutons
@@ -68,6 +74,9 @@ button_s = tk.Button(window #création du bouton start ainsi que son placement
                      ,text='start'
                      ,command=start
                       ,bg='blue',)
+img = ImageTk.PhotoImage(Image.open(path))
+label = tk.Label(window, image = img)
+label.pack()
 #button_s.place(relx=0.45,rely=0.5,relwidth=0.1, height=50)
 #placements et créations des boutons pour les 4 difficultés
 #button_f = tk.Button(window,

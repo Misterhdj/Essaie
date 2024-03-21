@@ -4,9 +4,6 @@ from Excel_module import *
 from test2 import *
 from test3 import *
 
-window.mainloop()
-window
-
 
 dico1 = {}
 score = 0 

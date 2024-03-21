@@ -5,11 +5,8 @@ from test2 import *
 from test3 import *
 
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 22932e8d13a5b7d43a971c33996eea3abfc46b61
-
+window.mainloop()
+window
 
 dico1 = {}
 score = 0 

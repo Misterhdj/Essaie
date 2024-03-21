@@ -76,7 +76,7 @@ button_s = tk.Button(window #création du bouton start ainsi que son placement
                       ,bg='blue',)
 img = ImageTk.PhotoImage(Image.open(path))
 label = tk.Label(window, image = img)
-label.pack()
+label.place(relx=0,relwidth=1,relheight=1)
 #button_s.place(relx=0.45,rely=0.5,relwidth=0.1, height=50)
 #placements et créations des boutons pour les 4 difficultés
 #button_f = tk.Button(window,

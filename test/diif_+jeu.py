@@ -165,7 +165,7 @@ if ennemy == 2 :
           
 f = open("leaderboard.txt","a")
 if ennemy == 1 :
-    f.writelines(str("{0}".format(somme))+",{0}".format(Pseudo1)+"\n")
+    f.writelines(str("{0}".format(somme))+":{0}".format(Pseudo1)+"\n")
 if ennemy == 2 :
      if point1>point2 :
           print("{0} à gagner, avec un socre de {1}, {2} a quant à lui fait un score de {3}".format(Pseudo1,point1,Pseudo2,point2))

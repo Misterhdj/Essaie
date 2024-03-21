@@ -8,7 +8,7 @@ def classe()     :
      i = 0
      for line in lines :
           line = line.strip("\n")
-          player = line.split(",")
+          player = line.split(":")
           i = i + 1 
           lead[i]=player
           
@@ -21,11 +21,6 @@ def classe()     :
      for i in point :
           for x in lead :
                if i == lead[x][0] and lead[x][1] not in classement:
-                    classement.append("{0},{1}".format(lead[x][1]),lead[x][0])
+                    classement.append("{0} {1}".format(lead[x][1],lead[x][0]))
      print(classement)
-
-
-
-
-
-
+classe() 

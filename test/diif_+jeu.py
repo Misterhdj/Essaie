@@ -1,5 +1,4 @@
 import random
-import points
 from Excel_module import *
 from test2 import *
 from test3 import *

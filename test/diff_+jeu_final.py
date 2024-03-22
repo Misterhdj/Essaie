@@ -79,11 +79,11 @@ while u == 1 :                                            # boucle pour pouvoir 
 
 
 
-        z2=mot
-        z3=z2.copy()
-        pave= list("_"*len(z2))
-        lettres = []
-        alphabet=list("qwertzuiopasdfghjklyxcvbnm-")
+        z2=mot    #on defini une variable égal au  mot choisi
+        z3=z2.copy()   #on en fait une copie qui nous servira plus tard
+        pave= list("_"*len(z2))  #on créer une liste qui ne contient que des underscor, pour l'afficher et montrer visuellement combien de lettres il reste à deviner
+        lettres = []  #on créer une liste qui va nous servir à stoquer les lettres déjà essayées
+        alphabet=list("qwertzuiopasdfghjklyxcvbnm-") #On créer une liste qui contient l'alphabet qui nous servira à verifier que la lettre à essayer y est contenue
         
 
         print(pave)
@@ -91,24 +91,24 @@ while u == 1 :                                            # boucle pour pouvoir 
             print("Il reste {0} lettres à deviner".format(len(z2)))
             
             x = input("Donnez une lettre, vous avez déjà essayer {0}".format(lettres))
-            while len(x)>1 or len(x)==0 or x in lettres or x not in alphabet:
+            while len(x)>1 or len(x)==0 or x in lettres or x not in alphabet: #on vérifie dans l'ordre : si le joueur essaye de donner plus d'une letter, pas de lettre, si la lettre a déjà été essayer et si la lettre est contenue dans l'alphabet, et dans un des cas, on redemande une lettre
                 x=input("Donnez une lettre, vous avez déjà essayer celle-la")
             if x in z2 :
                 index = []
                 for i in range(len(z3)) :
                     if z3[i] == x :
-                        index.append(i)
+                        index.append(i) #Ici, on parcourt la liste qui contient chaque caractere du mot, et si elle le contient, on stoque l'index du caractere dans la liste
                 print(index)
                 for i in index :
                         pave[i]=x
                         for i in z2 : 
                             if i == x :
-                                z2.remove(x)
-                lettres.append(x)
+                                z2.remove(x) #on remplace dans la liste d'undersocre les lettres, on prenant comme exmaple la copie de la liste du mot, puis on retire les lettres de la liste originale. La copie de la liste sert ici car elle nous permet de garder les bon index, et donc la bonne place de la lettre dans le mot
+                lettres.append(x)#On ajoute la lettre à la liste des lettres essayées
                 print(pave)
-                print("La lettre {0} est contenue dans le mot".format(x))
-                if len(z2)== 0 and y!=0 :
-                    print("Tu as gagné")
+                print("La lettre {0} est contenue dans le mot".format(x))#on avertit le joueur qu'îl a trouver une lettre contenue dans le mot
+                if len(z2)== 0 and y!=0 : 
+                    print("Tu as gagné") #Si la longueur de la liste de laquelle on retire chaque lettre devinée est égale à zéro, alors c'est qu'il n'y a plus de lettre à deviner, et donc que le joueur à deviner le  mot et donc gagner
                     if len(z3)>8 :
                         o = (len(z3)-8)*1.5
                         
@@ -125,11 +125,11 @@ while u == 1 :                                            # boucle pour pouvoir 
             
             else :
                 print(pave)
-                print("La lettre {0} n'est pas contenue dans le mot".format(x))
-                y = y-1
-                print("Il vous reste {0} essaie(s)".format(y))
-                lettres.append(x)
-                if y ==0 :
+                print("La lettre {0} n'est pas contenue dans le mot".format(x)) #Si la lettre n'est pas contnu dans le mot, on en avertit le joueur
+                y = y-1 #On diminue la valeur de  de un, y étant le nombre d'essaiesf
+                print("Il vous reste {0} essaie(s)".format(y))#On informe le joueur du nombre d'essaies qu'il lui reste
+                lettres.append(x)#On ajoute la lettre à la liste des lettres essayées
+                if y ==0 :#Si le nombre d'essaie : y est égale à zéro, alors le joueur à perdu
                     print("Tu as perdu") 
                     print("Le mot était {0}".format(z3))
     u = int(input("Voulez-vous recommencer si oui, taper 1 sinon, taper 2"))               
@@ -162,15 +162,6 @@ if ennemy == 2 :                                                                
          print("Vous avez fait une égalité avec tout deux {0} points, bien joué !".format(point1*2))
 f.close()
 
-f = open("leaderboard.txt","r")
-lines =f.readlines()
-lead = {}
-i = 0
-for line in lines :
-     line = line.strip("\n")
-     player = line.split(",")
-     i = i + 1 
-     lead[i]=player
-     
-f.close()
+
+
 z.classe()

@@ -44,19 +44,19 @@ while u == 1 :                                            # boucle pour pouvoir 
             if difficulty == 1 :
                 mot =list_1[int(random.randint(0,len(list_1)-1))]       # la difficulté correspond au nombre d'essaie pour deviner le mot aléatoire et de la complexité du mot aléatoire,
                                                                         # la list_1 contient des mots plutot simples et pas trop long et la list_2 contient des mots très compliqué et long
-                print(mot)
+                
                 y = 10                    # on definit le nb d'essaie permit: ( le nombre de fausse lettres qu'on a le droit d'écrire avant de perdre)
             if difficulty == 2 :
                 mot =list_1[int(random.randint(0,len(list_1)-1))]       
-                print(mot)
+                
                 y = 6
             if difficulty == 3 :
                 mot =list_2[int(random.randint(0,len(list_2)-1))]
-                print(mot)
+                
                 y = 8
             else:
                 mot =list_2[int(random.randint(0,len(list_2)-1))]
-                print(mot)
+                
                 y = 6
 
         else:                                                                            # pour le mode de jeu a plusieurs, on regarde au combient-ieme mot à deviner nous en sommes, 

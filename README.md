@@ -14,6 +14,6 @@ Assure-toi d'avoir d'installé Tkinter, pathlib, pilow et random
 3. Ouvre le fichier jeu_final.py
 4. démarre simplement le programme
 # Qu'est-ce que ce projet nous a apporté?
-Tkinter c'est nul. Sur une note plus sérieuse, il faut faire attention, car c'est de la programmation evenementiel alors que nous voulions coder en séquensiel. PI game est potentiellement une solution plus adaptée à notre problème. Il nous a permis d'apprendre à déléguer et répartir le travail. De plus il nous a permis de découvrir comment travailler en équipe. Finalement N'UTILISEZ PAS ONEDRIVE AVEC UN RéPERTOIRE GITBHUB!!
+Tkinter c'est nul. Sur une note plus sérieuse, il faut faire attention, car c'est de la programmation evenementiel alors que nous voulions coder en séquensiel. PI game est potentiellement une solution plus adaptée à notre problème. Il nous a permis d'apprendre à déléguer et répartir le travail. De plus il nous a permis de découvrir comment travailler en équipe. Finalement :__N'UTILISEZ PAS ONEDRIVE AVEC UN RéPERTOIRE GITBHUB__!!
 # auteurs du projet 
 Matteo Willa, Gregory Serillon et Jules Leuba

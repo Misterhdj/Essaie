@@ -1,6 +1,6 @@
 import random                        # importation des modules pour 1: pouvoir choisir un element aleatoire dans une liste
 import points
-from Excel_module import *           # 2: verifier si le mot a faire deviner est un vrai mot
+from exel_moduléefinale import *           # 2: verifier si le mot a faire deviner est un vrai mot
 from test2 import *                   # 3: interface de tkinter
 from test3 import *                 # interface tkinter
 import z 
